@@ -2,16 +2,31 @@ import requests
 import mutagen
 import json
 
+def getReleaseFromMaster(master_id):
+    base_url = 'https://api.discogs.com/masters/'
+    response = requests.get(base_url + master_id)
+    response_json = json.loads(response.text)
+    
+    release_id = response_json['main_release_url'].rsplit('/', 1)[1]
+
+    return release_id
+
 def Discogs(files):
     # get json
-    audio_file = mutagen.File(files[0])
-    discogs_id = audio_file['custom'][0].rsplit('/', 1)[1]
+    file = mutagen.File(files[0])
+    base_url = 'https://api.discogs.com/releases/'
 
-    discogs_api_base_url = 'https://api.discogs.com/releases/'
+    print(file)
 
-    response = requests.get(discogs_api_base_url + discogs_id)
+    url = file['custom'][0]
+    id = url.rsplit('/', 1)[1]
+
+    if '/master/' in url:
+        id = getReleaseFromMaster(id)
+
+    response = requests.get(base_url + id)
     
     return {
         'json': json.loads(response.text),
-        'url': discogs_api_base_url + discogs_id,
+        'url': base_url + id,
     }
