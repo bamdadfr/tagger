@@ -1,12 +1,19 @@
+# general stuff
 from simple_chalk import chalk
-from mutagen.flac import FLAC
+import time
 
+# tagging libraries
+from mutagen.flac import FLAC
+from mutagen.easyid3 import EasyID3
+
+# config and functions
 from config import *
 from utils import arrayToString
 
+# classes
 from Folder import Folder
 from File import File
-from Discogs import Discogs
+from Discogs import Discogs, sleep
 
 # --- RUNTIME ---
 
@@ -14,6 +21,9 @@ folders = Folder(MY_PATH)
 print ()
 
 for folder in folders:
+
+    sleep()
+
     print(chalk.green(folder))
     print()
 
@@ -32,15 +42,30 @@ for folder in folders:
     styles = arrayToString(discogs['json']['styles'])
 
     for file in files:
-        f = FLAC(file)
+        file_extension = file.rsplit('.', 1)[1]
+
+        if file_extension == 'flac':
+            f = FLAC(file)
+            
+            f['organization'] = label
+            f['composer'] = genres
+            f['genre'] = styles
+            f['date'] = date
+
+            print(f['tracknumber'][0] + ' done')
+
+            f.save()
         
-        f['organization'] = label
-        f['composer'] = genres
-        f['genre'] = styles
-        f['date'] = date
+        if file_extension == 'mp3':
+            f = EasyID3(file)
 
-        print(f['tracknumber'][0] + ' done')
+            f['organization'] = label
+            f['composer'] = genres
+            f['genre'] = styles
+            f['date'] = date
 
-        f.save()
+            print(f['tracknumber'][0] + ' done')
+
+            f.save()
 
     print(chalk.yellow('\n---\n'))

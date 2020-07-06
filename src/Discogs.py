@@ -1,8 +1,22 @@
+import time
+from config import DISCOGS_MAX_RATE
+from simple_chalk import chalk
+
 import requests
-import mutagen
 import json
 
+import mutagen
+from mutagen.mp3 import MP3
+
+def sleep():
+    prefix = 'discogs api call: '
+    print(prefix + chalk.yellow('sleeping...'))
+    time.sleep(60 / DISCOGS_MAX_RATE)
+    print(prefix + chalk.yellow('go!') + '\n')
+
 def getReleaseFromMaster(master_id):
+    sleep()
+
     base_url = 'https://api.discogs.com/masters/'
     response = requests.get(base_url + master_id)
     response_json = json.loads(response.text)
@@ -13,14 +27,21 @@ def getReleaseFromMaster(master_id):
 
 def Discogs(files):
     # get json
-    file = mutagen.File(files[0])
     base_url = 'https://api.discogs.com/releases/'
+    file_extension = files[0].rsplit('.', 1)[1]
 
-    print(file)
+    # logics by extensions
+    if file_extension == 'flac':
+        file = mutagen.File(files[0])
+        url = file['custom'][0]
+        id = url.rsplit('/', 1)[1]
 
-    url = file['custom'][0]
-    id = url.rsplit('/', 1)[1]
+    elif file_extension == 'mp3':
+        file = MP3(files[0])
+        url = str(file['TXXX:Custom'])
+        id = url.rsplit('/', 1)[1]
 
+    # logics if discogs/master
     if '/master/' in url:
         id = getReleaseFromMaster(id)
 

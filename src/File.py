@@ -6,6 +6,8 @@ def File(path):
         for name in files:
             if ".flac" in name:
                 results.append(os.path.join(root, name))
+            if ".mp3" in name:
+                results.append(os.path.join(root, name))
 
     results.sort()
 
