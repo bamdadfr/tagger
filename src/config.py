@@ -1,0 +1,1 @@
+MY_PATH = '/Volumes/X30/jriver/deemix/downloads/'
