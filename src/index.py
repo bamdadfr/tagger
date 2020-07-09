@@ -6,6 +6,8 @@ import datetime
 # tagging libraries
 from mutagen.flac import FLAC
 from mutagen.easyid3 import EasyID3
+from mutagen.id3 import ID3, TXXX
+import mutagen
 
 # config and functions
 from config import *
@@ -74,9 +76,9 @@ for folder in folders:
             f['date'] = date
             f['country'] = country
 
-            print(f['tracknumber'][0] + ' done')
-
             f.save()
+
+            print(f['tracknumber'][0] + ' done')
         
         if file_extension == 'mp3':
             f = EasyID3(file)
@@ -85,8 +87,17 @@ for folder in folders:
             f['composer'] = genres
             f['genre'] = styles
             f['date'] = date
-            f['country'] = country
+
+            f.save()
+            
+            f2 = ID3(file)
+            
+            f2.add(TXXX(
+                desc=u'country',
+                text=[country],
+            ))
+            
+            f2.save()
 
             print(f['tracknumber'][0] + ' done')
 
-            f.save()
