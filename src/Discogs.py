@@ -33,12 +33,18 @@ def Discogs(files):
     # logics by extensions
     if file_extension == 'flac':
         file = mutagen.File(files[0])
-        url = file['custom'][0]
+
+        if file.get('custom') is None: return None
+        
+        url = file.get('custom')[0]
         id = url.rsplit('/', 1)[1]
 
     elif file_extension == 'mp3':
         file = MP3(files[0])
-        url = str(file['TXXX:Custom'])
+
+        if file.get('TXXX:Custom') is None: return None
+
+        url = str(file.get('TXXX:Custom'))
         id = url.rsplit('/', 1)[1]
 
     # logics if discogs/master

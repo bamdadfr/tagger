@@ -32,21 +32,31 @@ for folder in folders:
     # print()
 
     discogs = Discogs(files)
-    print(chalk.blue(discogs['json']['artists_sort'] + ' - ' + discogs['json']['title']))
+    if discogs is None:
+        print(chalk.red('No discogs URL specified, skipping...\n'))
+        continue
+
+    print(chalk.blue(discogs['json'].get('artists_sort') + ' - ' + discogs['json'].get('title')))
     print(chalk.blue(discogs['url']))
     print()
 
-    label = discogs['json']['labels'][0]['name']
-    date = [discogs['json']['released'].replace('-', '/').replace('/00', '/01')]
-    genres = arrayToString(discogs['json']['genres'])
-    styles = arrayToString(discogs['json']['styles'])
+    label = discogs['json'].get('labels')[0]['name']
+    date = discogs['json'].get('released')
+
+    if date is None:
+        date = ['1234/01/01']
+    else:
+        date = [date.replace('-', '/').replace('/00', '/01')]
+
+    genres = arrayToString(discogs['json'].get('genres'))
+    styles = arrayToString(discogs['json'].get('styles'))
 
     for file in files:
         file_extension = file.rsplit('.', 1)[1]
 
         if file_extension == 'flac':
             f = FLAC(file)
-            
+
             f['organization'] = label
             f['composer'] = genres
             f['genre'] = styles

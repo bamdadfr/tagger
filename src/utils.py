@@ -1,5 +1,6 @@
 def arrayToString(array):
     string = ''
+    if array is None: return string
     
     splitter = '; '
     isFirst = True
