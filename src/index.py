@@ -1,6 +1,7 @@
 # general stuff
 from simple_chalk import chalk
 import time
+import datetime
 
 # tagging libraries
 from mutagen.flac import FLAC
@@ -51,7 +52,7 @@ for folder in folders:
     date = discogs['json'].get('released')
 
     if date is None:
-        date = ['1234/01/01']
+        date = [str(datetime.datetime.now().year)]
     else:
         date = [date.replace('-', '/').replace('/00', '/01')]
 
