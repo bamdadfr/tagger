@@ -40,7 +40,13 @@ for folder in folders:
     print(chalk.blue(discogs['url']))
     print()
 
+    # label
     label = discogs['json'].get('labels')[0]['name']
+
+    # country
+    country = discogs['json'].get('country')
+
+    # date
     date = discogs['json'].get('released')
 
     if date is None:
@@ -48,7 +54,10 @@ for folder in folders:
     else:
         date = [date.replace('-', '/').replace('/00', '/01')]
 
+    # genres
     genres = arrayToString(discogs['json'].get('genres'))
+    
+    # styles
     styles = arrayToString(discogs['json'].get('styles'))
 
     for file in files:
@@ -61,6 +70,7 @@ for folder in folders:
             f['composer'] = genres
             f['genre'] = styles
             f['date'] = date
+            f['country'] = country
 
             print(f['tracknumber'][0] + ' done')
 
@@ -73,6 +83,7 @@ for folder in folders:
             f['composer'] = genres
             f['genre'] = styles
             f['date'] = date
+            f['country'] = country
 
             print(f['tracknumber'][0] + ' done')
 
