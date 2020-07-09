@@ -18,9 +18,10 @@ from Discogs import Discogs, sleep
 # --- RUNTIME ---
 
 folders = Folder(MY_PATH)
-print ()
 
 for folder in folders:
+
+    print(chalk.yellow('\n---\n'))
 
     sleep()
 
@@ -33,7 +34,7 @@ for folder in folders:
 
     discogs = Discogs(files)
     if discogs is None:
-        print(chalk.red('No discogs URL specified, skipping...\n'))
+        print(chalk.red('No discogs URL specified, skipping...'))
         continue
 
     print(chalk.blue(discogs['json'].get('artists_sort') + ' - ' + discogs['json'].get('title')))
@@ -88,5 +89,3 @@ for folder in folders:
             print(f['tracknumber'][0] + ' done')
 
             f.save()
-
-    print(chalk.yellow('\n---\n'))
