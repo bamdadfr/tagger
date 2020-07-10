@@ -21,6 +21,7 @@ from Discogs import Discogs, sleep
 # --- RUNTIME ---
 
 folders = Folder(MY_PATH)
+print(chalk.green('\n' + MY_PATH))
 
 for folder in folders:
 
@@ -49,6 +50,9 @@ for folder in folders:
 
     # country
     country = discogs['json'].get('country')
+
+    if country is None:
+        country = ''
 
     # date
     date = discogs['json'].get('released')
@@ -101,3 +105,4 @@ for folder in folders:
 
             print(f['tracknumber'][0] + ' done')
 
+print('\n')
