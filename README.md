@@ -23,6 +23,5 @@ change `MY_PATH` in `src/config.py`
 ## run
 
 ```bash
-source configure.sh
 ./run.sh
 ```
