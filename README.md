@@ -4,10 +4,11 @@ my own tagging tool for my audio library.
 
 most of the things are hardcoded
 
-## requirements
+## dependencies
 
 - python3
-- pip3
+- python3-pip
+- python3-venv
 
 ## install
 
