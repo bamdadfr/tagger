@@ -4,6 +4,17 @@ my own tagging tool for my audio library.
 
 most of the things are hardcoded
 
+## requirements
+
+- python3
+- pip3
+
+## install
+
+```bash
+./install.sh
+```
+
 ## configure
 
 change `MY_PATH` in `src/config.py`
