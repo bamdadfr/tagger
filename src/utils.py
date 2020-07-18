@@ -1,7 +1,11 @@
+def replaceCommas(string):
+    return string.replace(',', ';')
+
+
 def arrayToString(array):
-    string = ''
-    if array is None: return string
+    if array is None: return 'TO_FILL'
     
+    string = ''
     splitter = '; '
     isFirst = True
 
@@ -11,5 +15,7 @@ def arrayToString(array):
             string += element
         else:
             string += splitter + element
+    
+    string = replaceCommas(string)
 
     return string
