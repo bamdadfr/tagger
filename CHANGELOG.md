@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bamdadsabbagh/tagger/compare/v1.0.2...v1.0.3) (2020-07-19)
+
+
+### Bug Fixes
+
+* closes [#3](https://github.com/bamdadsabbagh/tagger/issues/3) and [#4](https://github.com/bamdadsabbagh/tagger/issues/4) ([73104da](https://github.com/bamdadsabbagh/tagger/commit/73104dafc1a4274e3078fcd4531a66cf74ff2746))
+
 ## [1.0.2](https://github.com/bamdadsabbagh/tagger/compare/v1.0.1...v1.0.2) (2020-07-17)
 
 
