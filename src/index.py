@@ -27,8 +27,8 @@ for folder in folders:
     files = File(folder)
     try:
         discogs = Discogs(files)
-    except FileNotFoundError as err:
-        print(chalk.red(err))
+    except:
+        print(chalk.red('some error happened...'))
         continue
 
     if discogs == TAGGING_DONE:
