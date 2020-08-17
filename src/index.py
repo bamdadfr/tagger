@@ -38,7 +38,9 @@ for folder in folders:
 
     try:
         discogs = Discogs(files)
-    # if discogs is None:
+        if discogs is None:
+            print(chalk.red('No discogs URL specified, skipping...'))
+            continue
     except:
         print(chalk.red('No discogs URL specified, skipping...'))
         continue
