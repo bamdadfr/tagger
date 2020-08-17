@@ -25,7 +25,11 @@ for folder in folders:
     print()
 
     files = File(folder)
-    discogs = Discogs(files)
+    try:
+        discogs = Discogs(files)
+    except FileNotFoundError as err:
+        print(chalk.red(err))
+        continue
 
     if discogs == TAGGING_DONE:
         print(chalk.yellow(TAGGING_DONE))
