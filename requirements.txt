@@ -3,7 +3,7 @@ chardet==3.0.4
 deprecation==2.1.0
 filetype==1.0.7
 idna==2.10
-mutagen==1.45.0
+mutagen==1.45.1
 packaging==20.4
 pyparsing==2.4.7
 requests==2.24.0
