@@ -1,5 +1,4 @@
 # general stuff
-from simple_chalk import chalk
 import time
 import datetime
 
@@ -15,15 +14,15 @@ from Tagger import Tagger
 # --- RUNTIME ---
 
 folders = Folder(MY_PATH)
-print(chalk.green('\n' + MY_PATH))
+print('\n' + MY_PATH)
 
 for folder in folders:
 
-    print(chalk.yellow('\n---\n'))
+    print(('\n---\n')
 
     sleep()
 
-    print(chalk.green(folder))
+    print((folder)
     print()
 
     files = File(folder)

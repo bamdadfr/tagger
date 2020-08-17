@@ -1,4 +1,3 @@
-from simple_chalk import chalk
 import datetime
 
 # tagging libraries
@@ -13,7 +12,7 @@ from utils import arrayToString
 
 def TaggerWriteNone(files):
 
-    print(chalk.red(ERROR_DISCOGS_NULL))
+    print(ERROR_DISCOGS_NULL)
 
     for file in files:
         try:
@@ -43,7 +42,7 @@ def TaggerWriteNone(files):
                 
                 print(f['tracknumber'][0] + ' done')
         except:
-            print(chalk.red(ERROR_TAGGING))
+            print(ERROR_TAGGING)
             continue
 
 def TaggerWriteData(files, discogs):
@@ -109,7 +108,7 @@ def TaggerWriteData(files, discogs):
 
                 print(f['tracknumber'][0] + ' done')
         except:
-            print(chalk.red(ERROR_TAGGING))
+            print(ERROR_TAGGING)
             continue
 
 
@@ -119,8 +118,8 @@ def Tagger(files, discogs):
         TaggerWriteNone(files)
         return
 
-    print(chalk.blue(discogs['json'].get('artists_sort') + ' - ' + discogs['json'].get('title')))
-    print(chalk.blue(discogs['url']))
+    print(discogs['json'].get('artists_sort') + ' - ' + discogs['json'].get('title'))
+    print(discogs['url'])
     print()
 
     TaggerWriteData(files, discogs)

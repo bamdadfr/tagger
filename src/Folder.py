@@ -1,5 +1,4 @@
 import os
-from simple_chalk import chalk
 
 def Folder(paths):
     results = []
@@ -11,8 +10,8 @@ def Folder(paths):
 
     results.sort()
 
-    print(chalk.yellow('\n---\n'))
-    print(chalk.blue(len(results) + ' folders found.'))
-    print(chalk.yellow('\n---\n'))
+    print('\n---\n')
+    print(len(results) + ' folders found.')
+    print('\n---\n')
 
     return results

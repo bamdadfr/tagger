@@ -1,6 +1,5 @@
 import time
 from config import DISCOGS_MAX_RATE
-from simple_chalk import chalk
 
 import requests
 import json
@@ -10,9 +9,9 @@ from mutagen.mp3 import MP3
 
 def sleep():
     prefix = 'discogs api call: '
-    print(prefix + chalk.yellow('sleeping...'))
+    print(prefix + 'sleeping...')
     time.sleep(60 / DISCOGS_MAX_RATE)
-    print(prefix + chalk.yellow('go!') + '\n')
+    print(prefix + 'go!' + '\n')
 
 def getReleaseFromMaster(master_id):
     sleep()
