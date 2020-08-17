@@ -1,11 +1,11 @@
-from config import *
+from env import *
 
 def replaceCommas(string):
     return string.replace(',', ';')
 
 
 def arrayToString(array):
-    if array is None: return TAGGING_TODO
+    if array is None: return ENV_TAGGING_TODO
     
     string = ''
     splitter = '; '

@@ -8,12 +8,12 @@ from mutagen.id3 import ID3, TXXX
 import mutagen
 
 # config
-from config import *
+from env import *
 from utils import arrayToString
 
 def TaggerWriteNone(files):
 
-    print(chalk.red(ERROR_DISCOGS_NULL))
+    print(chalk.red(ENV_ERROR_DISCOGS_NULL))
 
     for file in files:
         try:
@@ -22,7 +22,7 @@ def TaggerWriteNone(files):
             if file_extension == 'flac':
                 f = FLAC(file)
 
-                f['custom'] = TAGGING_TODO
+                f['custom'] = ENV_TAGGING_TODO
 
                 f.save()
 
@@ -31,13 +31,13 @@ def TaggerWriteNone(files):
             if file_extension == 'mp3':
                 f = EasyID3(file)
 
-                f['custom'] = TAGGING_TODO
+                f['custom'] = ENV_TAGGING_TODO
 
                 f.save()
                 
                 print(f['tracknumber'][0] + ' done')
         except:
-            print(chalk.red(ERROR_TAGGING))
+            print(chalk.red(ENV_ERROR_TAGGING))
             continue
 
 def TaggerWriteData(files, discogs):
@@ -77,7 +77,7 @@ def TaggerWriteData(files, discogs):
                 f['genre'] = styles
                 f['date'] = date
                 f['country'] = country
-                f['custom'] = TAGGING_DONE + ' ' + f['custom'][0]
+                f['custom'] = ENV_TAGGING_DONE + ' ' + f['custom'][0]
 
                 f.save()
 
@@ -102,7 +102,7 @@ def TaggerWriteData(files, discogs):
 
                 f2.add(TXXX(
                     desc=u'Custom',
-                    text=[str(TAGGING_DONE + ' ' + str(f2.get('TXXX:Custom')))]
+                    text=[str(ENV_TAGGING_DONE + ' ' + str(f2.get('TXXX:Custom')))]
                 ))
                 
                 f2.save()
@@ -112,7 +112,7 @@ def TaggerWriteData(files, discogs):
             print(chalk.red(err))
             raise
         except:
-            print(chalk.red(ERROR_TAGGING))
+            print(chalk.red(ENV_ERROR_TAGGING))
             continue
 
 

@@ -1,5 +1,5 @@
 import time
-from config import *
+from env import *
 from simple_chalk import chalk
 
 import requests
@@ -11,7 +11,7 @@ from mutagen.mp3 import MP3
 def sleep():
     prefix = 'discogs api call: '
     print(prefix + chalk.yellow('sleeping...'))
-    time.sleep(60 / DISCOGS_MAX_RATE)
+    time.sleep(60 / ENV_DISCOGS_MAX_RATE)
     print(prefix + chalk.yellow('go!') + '\n')
 
 def getReleaseFromMaster(master_id):
@@ -38,11 +38,11 @@ def Discogs(files):
         if file.get('custom') is None:
             return None
 
-        if file.get('custom')[0][:4] == TAGGING_DONE:
-            return TAGGING_DONE
+        if file.get('custom')[0][:4] == ENV_TAGGING_DONE:
+            return ENV_TAGGING_DONE
         
-        if file.get('custom')[0][:4] == TAGGING_TODO:
-            return TAGGING_TODO
+        if file.get('custom')[0][:4] == ENV_TAGGING_TODO:
+            return ENV_TAGGING_TODO
         
         url = file.get('custom')[0]
         id = url.rsplit('/', 1)[1]
@@ -54,11 +54,11 @@ def Discogs(files):
         if file.get('TXXX:Custom') is None:
             return None
         
-        if str(file.get('TXXX:Custom'))[:4] == TAGGING_DONE:
-            return TAGGING_DONE
+        if str(file.get('TXXX:Custom'))[:4] == ENV_TAGGING_DONE:
+            return ENV_TAGGING_DONE
         
-        if str(file.get('TXXX:Custom'))[:4] == TAGGING_TODO:
-            return TAGGING_TODO
+        if str(file.get('TXXX:Custom'))[:4] == ENV_TAGGING_TODO:
+            return ENV_TAGGING_TODO
         
         url = str(file.get('TXXX:Custom'))
         id = url.rsplit('/', 1)[1]

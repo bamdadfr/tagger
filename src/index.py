@@ -4,7 +4,7 @@ import time
 import datetime
 
 # config
-from config import *
+from env import *
 
 # classes
 from Folder import Folder
@@ -14,7 +14,7 @@ from Tagger import Tagger
 
 # --- RUNTIME ---
 
-folders = Folder(MY_PATH)
+folders = Folder(ENV_PATHS)
 # print(chalk.green('\n' + MY_PATH))
 
 for folder in folders:
@@ -31,12 +31,12 @@ for folder in folders:
         print(chalk.red('some error happened...'))
         continue
 
-    if discogs == TAGGING_DONE:
-        print(chalk.yellow(TAGGING_DONE))
+    if discogs == ENV_TAGGING_DONE:
+        print(chalk.yellow(ENV_TAGGING_DONE))
         continue
     
-    if discogs == TAGGING_TODO:
-        print(chalk.yellow(TAGGING_TODO))
+    if discogs == ENV_TAGGING_TODO:
+        print(chalk.yellow(ENV_TAGGING_TODO))
         continue
 
     Tagger(files, discogs)
