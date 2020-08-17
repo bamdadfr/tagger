@@ -1,9 +1,11 @@
+from config import *
+
 def replaceCommas(string):
     return string.replace(',', ';')
 
 
 def arrayToString(array):
-    if array is None: return 'TO_FILL'
+    if array is None: return TAGGING_NULL
     
     string = ''
     splitter = '; '
