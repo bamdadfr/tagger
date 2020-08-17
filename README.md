@@ -25,3 +25,7 @@ change `MY_PATH` in `src/config.py`
 ```bash
 ./run.sh
 ```
+
+## TODO
+
+- [ ] dockerize to execute everywhere
