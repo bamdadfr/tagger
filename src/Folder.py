@@ -12,7 +12,7 @@ def Folder(paths):
     results.sort()
 
     print(chalk.yellow('\n---\n'))
-    print(chalk.blue(len(results) + ' folders found.'))
+    print(chalk.blue(str(len(results)) + ' folders found.'))
     print(chalk.yellow('\n---\n'))
 
     return results

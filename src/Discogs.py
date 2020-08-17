@@ -1,5 +1,5 @@
 import time
-from config import DISCOGS_MAX_RATE
+from config import *
 from simple_chalk import chalk
 
 import requests
@@ -31,19 +31,35 @@ def Discogs(files):
     file_extension = files[0].rsplit('.', 1)[1]
 
     # logics by extensions
+    # FLAC
     if file_extension == 'flac':
         file = mutagen.File(files[0])
 
-        if file.get('custom') is None: return None
+        if file.get('custom') is None:
+            return None
+
+        if file.get('custom')[0][:4] == TAGGING_DONE:
+            return TAGGING_DONE
+        
+        if file.get('custom')[0][:4] == TAGGING_TODO:
+            return TAGGING_TODO
         
         url = file.get('custom')[0]
         id = url.rsplit('/', 1)[1]
 
+    # MP3
     elif file_extension == 'mp3':
         file = MP3(files[0])
 
-        if file.get('TXXX:Custom') is None: return None
-
+        if file.get('TXXX:Custom') is None:
+            return None
+        
+        if str(file.get('TXXX:Custom'))[:4] == TAGGING_DONE:
+            return TAGGING_DONE
+        
+        if str(file.get('TXXX:Custom'))[:4] == TAGGING_TODO:
+            return TAGGING_TODO
+        
         url = str(file.get('TXXX:Custom'))
         id = url.rsplit('/', 1)[1]
 

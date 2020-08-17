@@ -5,7 +5,7 @@ def replaceCommas(string):
 
 
 def arrayToString(array):
-    if array is None: return TAGGING_NULL
+    if array is None: return TAGGING_TODO
     
     string = ''
     splitter = '; '

@@ -15,23 +15,26 @@ from Tagger import Tagger
 # --- RUNTIME ---
 
 folders = Folder(MY_PATH)
-print(chalk.green('\n' + MY_PATH))
+# print(chalk.green('\n' + MY_PATH))
 
 for folder in folders:
 
     print(chalk.yellow('\n---\n'))
 
-    sleep()
-
     print(chalk.green(folder))
     print()
 
     files = File(folder)
-    try:
-        discogs = Discogs(files)
-    except:
-        discogs = None
+    discogs = Discogs(files)
+
+    if discogs == TAGGING_DONE:
+        print(chalk.yellow(TAGGING_DONE))
+        continue
     
+    if discogs == TAGGING_TODO:
+        print(chalk.yellow(TAGGING_TODO))
+        continue
+
     Tagger(files, discogs)
 
 print('\n')

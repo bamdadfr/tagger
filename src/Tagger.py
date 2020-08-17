@@ -22,10 +22,7 @@ def TaggerWriteNone(files):
             if file_extension == 'flac':
                 f = FLAC(file)
 
-                f['organization'] = TAGGING_NULL
-                f['composer'] = TAGGING_NULL
-                f['genre'] = TAGGING_NULL
-                f['custom'] = TAGGING_NULL
+                f['custom'] = TAGGING_TODO
 
                 f.save()
 
@@ -34,10 +31,7 @@ def TaggerWriteNone(files):
             if file_extension == 'mp3':
                 f = EasyID3(file)
 
-                f['organization'] = TAGGING_NULL
-                f['composer'] = TAGGING_NULL
-                f['genre'] = TAGGING_NULL
-                f['custom'] = TAGGING_NULL
+                f['custom'] = TAGGING_TODO
 
                 f.save()
                 
@@ -83,6 +77,7 @@ def TaggerWriteData(files, discogs):
                 f['genre'] = styles
                 f['date'] = date
                 f['country'] = country
+                f['custom'] = TAGGING_DONE + ' ' + f['custom'][0]
 
                 f.save()
 
@@ -99,15 +94,23 @@ def TaggerWriteData(files, discogs):
                 f.save()
                 
                 f2 = ID3(file)
-                
+
                 f2.add(TXXX(
                     desc=u'country',
                     text=[country],
+                ))
+
+                f2.add(TXXX(
+                    desc=u'Custom',
+                    text=[str(TAGGING_DONE + ' ' + str(f2.get('TXXX:Custom')))]
                 ))
                 
                 f2.save()
 
                 print(f['tracknumber'][0] + ' done')
+        except err:
+            print(chalk.red(err))
+            raise
         except:
             print(chalk.red(ERROR_TAGGING))
             continue
