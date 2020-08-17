@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/bamdadsabbagh/tagger/compare/v1.0.3...v1.0.4) (2020-08-17)
+
+
+### Bug Fixes
+
+* nonetype was useful afterall ([f226db1](https://github.com/bamdadsabbagh/tagger/commit/f226db1a130ebd15741cf2cb3b192db5bfe874e2))
+* replaced if with try block ([6aad8f7](https://github.com/bamdadsabbagh/tagger/commit/6aad8f787580d07f59ebb4dfcfb6e4328753955d))
+
 ## [1.0.3](https://github.com/bamdadsabbagh/tagger/compare/v1.0.2...v1.0.3) (2020-07-19)
 
 
