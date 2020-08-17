@@ -26,6 +26,8 @@ def getReleaseFromMaster(master_id):
     return release_id
 
 def Discogs(files):
+    sleep()
+    
     # get json
     base_url = 'https://api.discogs.com/releases/'
     file_extension = files[0].rsplit('.', 1)[1]
