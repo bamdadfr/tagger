@@ -1,3 +1,21 @@
+# [1.1.0](https://github.com/bamdadsabbagh/tagger/compare/v1.0.4...v1.1.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* adding sleep() ([2f1ef45](https://github.com/bamdadsabbagh/tagger/commit/2f1ef45586c5424a11130b70a1d6882f6ec4a3e8))
+* mouais ([f081848](https://github.com/bamdadsabbagh/tagger/commit/f081848614d43ed5157bc2b9629f1bc4c25e973b))
+* renaming ([0daa457](https://github.com/bamdadsabbagh/tagger/commit/0daa4579a13aadf474cc2edf7991c5af30396c74))
+* replaced sleep ([ac03318](https://github.com/bamdadsabbagh/tagger/commit/ac03318d067dcde7a3b494ffe7fed290af21b52f))
+* small fix ([5e6d272](https://github.com/bamdadsabbagh/tagger/commit/5e6d272669b74c8128698c338384e1e91f126e22))
+* todo ([c349367](https://github.com/bamdadsabbagh/tagger/commit/c349367456b8a8988927f18a3c2ce8b94c8d4c5d))
+
+
+### Features
+
+* better code but still spaghetti ([8842f81](https://github.com/bamdadsabbagh/tagger/commit/8842f814a8c8542e0003042b4e7122dd1bee111f))
+* several improvements ([bd403f2](https://github.com/bamdadsabbagh/tagger/commit/bd403f2d2296565e6f6a60593c3810f56d8bdd2e))
+
 ## [1.0.4](https://github.com/bamdadsabbagh/tagger/compare/v1.0.3...v1.0.4) (2020-08-17)
 
 
