@@ -106,9 +106,6 @@ def TaggerWriteData(files, discogs):
                 f2.save()
 
                 print(f['tracknumber'][0] + ' done')
-        except err:
-            print(chalk.red(err))
-            raise
         except:
             print(chalk.red(ENV_ERROR_TAGGING))
             continue
