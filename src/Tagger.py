@@ -54,9 +54,7 @@ def TaggerWriteData(files, discogs):
     # date
     date = discogs['json'].get('released')
 
-    if date is None:
-        date = [str(datetime.datetime.now().year)]
-    else:
+    if date is not None:
         date = [date.replace('-', '/').replace('/00', '/01')]
 
     # genres
@@ -75,7 +73,7 @@ def TaggerWriteData(files, discogs):
                 f['organization'] = label
                 f['composer'] = genres
                 f['genre'] = styles
-                f['date'] = date
+                if date is not None: f['date'] = date
                 f['country'] = country
                 f['custom'] = ENV_TAGGING_DONE + ' ' + f['custom'][0]
 
@@ -89,7 +87,7 @@ def TaggerWriteData(files, discogs):
                 f['organization'] = label
                 f['composer'] = genres
                 f['genre'] = styles
-                f['date'] = date
+                if date is not None: f['date'] = date
 
                 f.save()
                 
