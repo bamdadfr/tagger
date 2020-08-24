@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/bamdadsabbagh/tagger/compare/v1.1.0...v1.1.1) (2020-08-24)
+
+
+### Bug Fixes
+
+* except err removed ([a811b94](https://github.com/bamdadsabbagh/tagger/commit/a811b944a9035342c74223906735b81f03be6322))
+* now overwriting date ([369475a](https://github.com/bamdadsabbagh/tagger/commit/369475a13abee1c31f84d7c81a56e80dff8240ba))
+
 # [1.1.0](https://github.com/bamdadsabbagh/tagger/compare/v1.0.4...v1.1.0) (2020-08-18)
 
 
