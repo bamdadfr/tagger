@@ -18,7 +18,7 @@ most of the things are hardcoded
 
 ## configure
 
-change `MY_PATH` in `src/config.py`
+change `ENV_PATHS` in `src/env.py`
 
 ## run
 
