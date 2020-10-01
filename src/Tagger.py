@@ -1,5 +1,5 @@
-from simple_chalk import chalk
 import datetime
+import style
 
 # tagging libraries
 from mutagen.flac import FLAC
@@ -13,7 +13,7 @@ from utils import arrayToString
 
 def TaggerWriteNone(files):
 
-    print(chalk.red(ENV_ERROR_DISCOGS_NULL))
+    print(style.red(ENV_ERROR_DISCOGS_NULL))
 
     for file in files:
         try:
@@ -37,7 +37,7 @@ def TaggerWriteNone(files):
                 
                 print(f['tracknumber'][0] + ' done')
         except:
-            print(chalk.red(ENV_ERROR_TAGGING))
+            print(style.red(ENV_ERROR_TAGGING))
             continue
 
 def TaggerWriteData(files, discogs):
@@ -107,7 +107,7 @@ def TaggerWriteData(files, discogs):
 
                 print(f['tracknumber'][0] + ' done')
         except:
-            print(chalk.red(ENV_ERROR_TAGGING))
+            print(style.red(ENV_ERROR_TAGGING))
             continue
 
 
@@ -117,8 +117,8 @@ def Tagger(files, discogs):
         TaggerWriteNone(files)
         return
 
-    print(chalk.blue(discogs['json'].get('artists_sort') + ' - ' + discogs['json'].get('title')))
-    print(chalk.blue(discogs['url']))
+    print(style.blue(discogs['json'].get('artists_sort') + ' - ' + discogs['json'].get('title')))
+    print(style.blue(discogs['url']))
     print()
 
     TaggerWriteData(files, discogs)
