@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/bamdadsabbagh/tagger/compare/v1.1.1...v1.2.0) (2020-10-01)
+
+
+### Bug Fixes
+
+* asfalte: 🔨 git-commit-force-release__push ([f5db544](https://github.com/bamdadsabbagh/tagger/commit/f5db5447af8872af5c4504c01c9ea06e3ef60ec3))
+* frozen requirements [force-release] ([4071157](https://github.com/bamdadsabbagh/tagger/commit/407115751a6ef155e9cc64bcb2051efb3b7c249d))
+
+
+### Features
+
+* replaced simple_chalk by style package ([92c9aac](https://github.com/bamdadsabbagh/tagger/commit/92c9aace257b01dfa0f324c3ec73bb04533fbbff))
+
 ## [1.1.1](https://github.com/bamdadsabbagh/tagger/compare/v1.1.0...v1.1.1) (2020-08-24)
 
 
