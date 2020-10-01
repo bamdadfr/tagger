@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/bamdadsabbagh/tagger/compare/v1.2.0...v1.2.1) (2020-10-01)
+
+
+### Bug Fixes
+
+* changed path ([fe7144c](https://github.com/bamdadsabbagh/tagger/commit/fe7144c8c52dba474857e2b76b9f8069639fe47b))
+
 # [1.2.0](https://github.com/bamdadsabbagh/tagger/compare/v1.1.1...v1.2.0) (2020-10-01)
 
 
