@@ -7,7 +7,8 @@ def Folder(paths):
     for path in paths:
         for root, dirs, files in os.walk(path, topdown=False):
             for dir in dirs:
-                results.append(os.path.join(root, dir))
+                if dir != '.AppleDouble':
+                    results.append(os.path.join(root, dir))
 
     results.sort()
 
