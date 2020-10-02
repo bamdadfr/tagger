@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/bamdadsabbagh/tagger/compare/v1.2.1...v1.2.2) (2020-10-02)
+
+
+### Bug Fixes
+
+* better readme ([19f81b2](https://github.com/bamdadsabbagh/tagger/commit/19f81b24eba6ac71400b75e65224a571d8874bc8))
+* ignoring appledouble folders ([abbf450](https://github.com/bamdadsabbagh/tagger/commit/abbf45032130854c65b05a7698e4bffbc71da998))
+
 ## [1.2.1](https://github.com/bamdadsabbagh/tagger/compare/v1.2.0...v1.2.1) (2020-10-01)
 
 
