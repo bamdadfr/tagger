@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/bamdadsabbagh/tagger/compare/v1.2.2...v1.2.3) (2020-10-22)
+
+
+### Bug Fixes
+
+* added method complexity for codeclimate ([a0a3ec5](https://github.com/bamdadsabbagh/tagger/commit/a0a3ec524b88427eaa2e32d176a66a8e16813e98))
+
 ## [1.2.2](https://github.com/bamdadsabbagh/tagger/compare/v1.2.1...v1.2.2) (2020-10-02)
 
 
