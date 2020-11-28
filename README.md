@@ -1,34 +1,45 @@
-# tagger
+# 
 
-[![version](https://img.shields.io/github/v/release/bamdadsabbagh/tagger)](#-discogs-to-id3-tagger)
+<p align=center>
+    <font size=10>
+        <a href="https://memaudio.org/">
+            tagger
+        </a>
+    </font>
+</p>
 
-[![code climate](https://api.codeclimate.com/v1/badges/cdc93bb5c41d0f1368fd/maintainability)](#-discogs-to-id3-tagger)
+<p align=center>
+    ID3 tagging tool for my audio library.
+</p>
 
-[![snyk](https://img.shields.io/snyk/vulnerabilities/github/bamdadsabbagh/tagger)](#-discogs-to-id3-tagger)
+<p align=center>
+    <img src="https://img.shields.io/github/v/release/bamdadsabbagh/tagger">
+    <img src="https://api.codeclimate.com/v1/badges/cdc93bb5c41d0f1368fd/maintainability">
+</p>
 
-my own tagging tool for my audio library.
-
-most of the things are hardcoded
+<p align=center>
+    <img src="https://img.shields.io/snyk/vulnerabilities/github/bamdadsabbagh/tagger">
+</p>
 
 <img src="https://i.imgur.com/0XdbwG1.gif"/>
 
-## dependencies
+## Dependencies
 
 - python3
 - python3-pip
 - python3-venv
 
-## install
+## How to install
 
 ```bash
 ./install.sh
 ```
 
-## configure
+## Configuration file
 
 change `ENV_PATHS` in `src/env.py`
 
-## run
+## Run
 
 ```bash
 ./run.sh
