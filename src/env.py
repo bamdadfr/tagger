@@ -3,6 +3,7 @@ ENV_PATHS = [
     '/storage/X30/jriver/soulseek/complete',
     '/storage/X30/jriver/deemix/downloads/',
     '/storage/X30/jriver/ready/',
+    '/storage/X30/jriver/temp/'
 ]
 
 ENV_DISCOGS_MAX_RATE = 25 # requests per minute
