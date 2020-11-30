@@ -1,7 +1,7 @@
 # 
 
 <p align=center>
-  <font size=20>💽</font>
+  <img width=150 src="https://www.discogs.com/images/brand/discogs-logo.svg">
 </p>
 
 <p align=center>
@@ -21,6 +21,10 @@
 <p align=center>
   <img src="https://img.shields.io/github/v/release/bamdadsabbagh/tagger">
   <img src="https://api.codeclimate.com/v1/badges/cdc93bb5c41d0f1368fd/maintainability">
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/snyk/vulnerabilities/github/bamdadsabbagh/tagger">
 </p>
 
 <p align=center>
