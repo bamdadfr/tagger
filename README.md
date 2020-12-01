@@ -1,11 +1,15 @@
-# 
+# <img width=25 src="https://www.discogs.com/images/brand/discogs-logo.svg"> Discogs to ID3 tagger
 
 <p align=center>
-  <img width=150 src="https://www.discogs.com/images/brand/discogs-logo.svg">
+  <a href="https://github.com/bamdadsabbagh/tagger"><img width=150 src="https://www.discogs.com/images/brand/discogs-logo.svg"></a>
 </p>
 
 <p align=center>
   Get data from Discogs API and automatically tag audio files
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/badge/role-lead-blueviolet">
 </p>
 
 <p align=center>
@@ -15,7 +19,7 @@
 
 <p align=center>
   <img src="https://img.shields.io/github/languages/count/bamdadsabbagh/tagger">
-  <img  src="https://img.shields.io/github/languages/top/bamdadsabbagh/tagger">
+  <img src="https://img.shields.io/github/languages/top/bamdadsabbagh/tagger">
 </p>
 
 <p align=center>
@@ -25,6 +29,10 @@
 
 <p align=center>
   <img src="https://img.shields.io/snyk/vulnerabilities/github/bamdadsabbagh/tagger">
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/badge/ci-github--actions-yellowgreen">
 </p>
 
 <p align=center>
