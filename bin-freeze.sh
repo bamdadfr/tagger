@@ -1,3 +1,3 @@
 #!/bin/bash
-source configure.sh
+source bin-configure.sh
 pip freeze > requirements.txt
