@@ -1,10 +1,8 @@
+# components
 from env import *
+from utils_replace_commas import UtilsReplaceCommas
 
-def replaceCommas(string):
-    return string.replace(',', ';')
-
-
-def arrayToString(array):
+def UtilsArrayToString(array):
     if array is None: return ENV_TAGGING_TODO
     
     string = ''
@@ -18,6 +16,6 @@ def arrayToString(array):
         else:
             string += splitter + element
     
-    string = replaceCommas(string)
+    string = UtilsReplaceCommas(string)
 
     return string

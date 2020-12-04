@@ -1,29 +1,13 @@
-import time
+# components
 from env import *
-import style
+from discogs_sleep import DiscogsSleep
+from discogs_get_release_from_master import DiscogsGetReleaseFromMaster
 
+# packages
 import requests
 import json
-
 import mutagen
 from mutagen.mp3 import MP3
-
-def sleep():
-    prefix = 'discogs api call: '
-    print(prefix + style.yellow('sleeping...'))
-    time.sleep(60 / ENV_DISCOGS_MAX_RATE)
-    print(prefix + style.yellow('go!') + '\n')
-
-def getReleaseFromMaster(master_id):
-    sleep()
-
-    base_url = 'https://api.discogs.com/masters/'
-    response = requests.get(base_url + master_id)
-    response_json = json.loads(response.text)
-    
-    release_id = response_json['main_release_url'].rsplit('/', 1)[1]
-
-    return release_id
 
 def Discogs(files):
     # get json
@@ -65,9 +49,9 @@ def Discogs(files):
 
     # logics if discogs/master
     if '/master/' in url:
-        id = getReleaseFromMaster(id)
+        id = DiscogsGetReleaseFromMaster(id)
 
-    sleep()
+    DiscogsSleep()
     
     response = requests.get(base_url + id)
     

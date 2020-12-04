@@ -1,18 +1,12 @@
-# general stuff
-import time
-import datetime
-import style
-
-# config
+# components
 from env import *
+from folder import Folder
+from file import File
+from discogs import Discogs
+from tagger import Tagger
 
-# classes
-from Folder import Folder
-from File import File
-from Discogs import Discogs, sleep
-from Tagger import Tagger
-
-# --- RUNTIME ---
+# packages
+import style
 
 folders = Folder(ENV_PATHS)
 # print(style.green('\n' + MY_PATH))
