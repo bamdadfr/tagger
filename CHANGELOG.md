@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/bamdadsabbagh/tagger/compare/v1.3.0...v1.3.1) (2020-12-04)
+
+
+### Bug Fixes
+
+* asfalte: 🔨 git-commit-force-release__push ([8058156](https://github.com/bamdadsabbagh/tagger/commit/805815623471c995a4f8933cbf0420023779df13))
+* getting rid of similar blocks ([f54e9f1](https://github.com/bamdadsabbagh/tagger/commit/f54e9f19784abca262d72cde21b8febeaf1b4ddd))
+
 # [1.3.0](https://github.com/bamdadsabbagh/tagger/compare/v1.2.3...v1.3.0) (2020-12-04)
 
 
