@@ -1,3 +1,19 @@
+# [1.3.0](https://github.com/bamdadsabbagh/tagger/compare/v1.2.3...v1.3.0) (2020-12-04)
+
+
+### Bug Fixes
+
+* asfalte: 🔨 git-commit-force-release__push ([4d95ddb](https://github.com/bamdadsabbagh/tagger/commit/4d95ddbaa6fde7a6f20a3f46079d43c47c4e8776))
+* forgot to prefix the source scripts ([2fa0f10](https://github.com/bamdadsabbagh/tagger/commit/2fa0f108b5970f0e50b4af157bc633557511af30))
+
+
+### Features
+
+* added update script ([f20f792](https://github.com/bamdadsabbagh/tagger/commit/f20f7921e908f1b38eb18c2fab2b0c967b254f7c))
+* refactoring to functional programming ([20d48e2](https://github.com/bamdadsabbagh/tagger/commit/20d48e22b96fd1f7210a3671b3391fbaed6cf2fb))
+* renamed all shell scripts with prefix `bin-` ([5b25b3b](https://github.com/bamdadsabbagh/tagger/commit/5b25b3bcf1d8a3789788910245f5c6b5ec94d3f5))
+* updated to latest packages ([b913ea1](https://github.com/bamdadsabbagh/tagger/commit/b913ea155dcbc17a44927e5379ac56059131ec1a))
+
 ## [1.2.3](https://github.com/bamdadsabbagh/tagger/compare/v1.2.2...v1.2.3) (2020-10-22)
 
 
