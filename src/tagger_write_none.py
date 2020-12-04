@@ -13,24 +13,19 @@ def TaggerWriteNone(files):
     for file in files:
         try:
             file_extension = file.rsplit('.', 1)[1]
+            f = None
 
             if file_extension == 'flac':
                 f = FLAC(file)
-
-                f['custom'] = ENV_TAGGING_TODO
-
-                f.save()
-
-                print(f['tracknumber'][0] + ' done')
             
             if file_extension == 'mp3':
                 f = EasyID3(file)
 
-                f['custom'] = ENV_TAGGING_TODO
+            f['custom'] = ENV_TAGGING_TODO
 
-                f.save()
-                
-                print(f['tracknumber'][0] + ' done')
+            f.save()
+            
+            print(f['tracknumber'][0] + ' done')
         except:
             print(style.red(ENV_ERROR_TAGGING))
             continue
