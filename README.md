@@ -46,7 +46,7 @@
 ```bash
 git clone git@github.com:bamdadsabbagh/tagger.git
 cd tagger
-./install.sh
+./bin-install.sh
 ```
 
 ## Configuration file
@@ -56,7 +56,7 @@ change `ENV_PATHS` in `src/env.py`
 ## Run
 
 ```bash
-./run.sh
+./bin-run.sh
 ```
 
 ## TODO
