@@ -1,5 +1,5 @@
 certifi==2020.11.8
-chardet==3.0.4
+chardet==4.0.0
 deprecation==2.1.0
 filetype==1.0.7
 idna==2.10
