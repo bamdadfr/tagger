@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/bamdadsabbagh/tagger/compare/v1.3.1...v1.4.0) (2021-03-20)
+
+
+### Features
+
+* **deps:** updated to latest packages ([24151ea](https://github.com/bamdadsabbagh/tagger/commit/24151eaa6e9cab56cbb933643865fe84e8a7f6b4))
+
 ## [1.3.1](https://github.com/bamdadsabbagh/tagger/compare/v1.3.0...v1.3.1) (2020-12-04)
 
 
