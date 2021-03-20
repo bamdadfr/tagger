@@ -1,15 +1,15 @@
-name: semantic-release__0430
+name: semantic-release--onMondays-1030
 
 on:
   schedule:
-    - cron: '30 4 * * *'
+    - cron: '30 10 * * 1' # every monday at 1030
   repository_dispatch:
     types:
       - docker-base-image-check
       - git-commit-force-release
 
 jobs:
-  semantic-release:
+  semantic-release--onMondays-1030:
     runs-on: ubuntu-latest
     steps:
 
@@ -19,10 +19,8 @@ jobs:
         with:
           node-version: '12'
 
-      - run: yarn
-
       - run: |
-          npm install -g \
+          npm i -g \
             semantic-release \
             @semantic-release/github \
             @semantic-release/git \
