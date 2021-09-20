@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/bamdadsabbagh/tagger/compare/v1.4.0...v1.4.1) (2021-09-20)
+
+
+### Bug Fixes
+
+* **release:** update ci workflows ([214def5](https://github.com/bamdadsabbagh/tagger/commit/214def5291be78e56a3394eb336642cd6c409092))
+
 # [1.4.0](https://github.com/bamdadsabbagh/tagger/compare/v1.3.1...v1.4.0) (2021-03-20)
 
 
