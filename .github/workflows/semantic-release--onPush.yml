@@ -1,11 +1,12 @@
-name: semantic-release--onMondays-1030
+name: semantic-release--onPush
 
 on:
-  schedule:
-    - cron: '30 10 * * 1' # every monday at 1030
+  push:
+    branches:
+      - master
 
 jobs:
-  semantic-release--onMondays-1030:
+  semantic-release--onPush:
     runs-on: ubuntu-latest
     steps:
 
@@ -16,7 +17,7 @@ jobs:
           node-version: '14'
 
       - run: |
-          npm i -g \
+          npm install -g \
             semantic-release \
             @semantic-release/github \
             @semantic-release/git \
