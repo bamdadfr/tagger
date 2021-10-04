@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/bamdadsabbagh/tagger/compare/v1.4.2...v1.4.3) (2021-10-04)
+
+
+### Bug Fixes
+
+* **discogs:** id is now correctly parsed from discogs url ([9287a2d](https://github.com/bamdadsabbagh/tagger/commit/9287a2d4dccb049049aac733333e769baee5bb1c))
+
 ## [1.4.2](https://github.com/bamdadsabbagh/tagger/compare/v1.4.1...v1.4.2) (2021-10-04)
 
 
