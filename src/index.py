@@ -7,6 +7,8 @@ from tagger import Tagger
 
 # packages
 import style
+import logging
+import traceback
 
 folders = Folder(ENV_PATHS)
 # print(style.green('\n' + MY_PATH))
@@ -21,8 +23,9 @@ for folder in folders:
     files = File(folder)
     try:
         discogs = Discogs(files)
-    except:
+    except Exception as e:
         print(style.red('some error happened...'))
+        logging.error(traceback.format_exc())
         continue
 
     if discogs == ENV_TAGGING_DONE:
