@@ -1,3 +1,11 @@
+## [1.4.2](https://github.com/bamdadsabbagh/tagger/compare/v1.4.1...v1.4.2) (2021-10-04)
+
+
+### Bug Fixes
+
+* add exception logging in index.py ([82923d0](https://github.com/bamdadsabbagh/tagger/commit/82923d03c5fefdb3500968399fc98e59d2681f4c))
+* requirements ([acf8ee0](https://github.com/bamdadsabbagh/tagger/commit/acf8ee0dbf771ef7c70ecdf1c9152003fdaaf39a))
+
 ## [1.4.1](https://github.com/bamdadsabbagh/tagger/compare/v1.4.0...v1.4.1) (2021-09-20)
 
 
