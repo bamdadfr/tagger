@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/bamdadsabbagh/tagger/compare/v1.4.3...v1.4.4) (2021-10-04)
+
+
+### Bug Fixes
+
+* add traceback on error discogs_get_release_from_master.py ([3ca4444](https://github.com/bamdadsabbagh/tagger/commit/3ca4444936e5c2694ac72f4691df004d704f1b36))
+
 ## [1.4.3](https://github.com/bamdadsabbagh/tagger/compare/v1.4.2...v1.4.3) (2021-10-04)
 
 
