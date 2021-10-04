@@ -11,7 +11,6 @@ def DiscogsGetReleaseFromMaster(master_id):
     base_url = 'https://api.discogs.com/masters/'
     response = requests.get(base_url + master_id)
     response_json = json.loads(response.text)
-    print(response.text, base_url + master_id)
 
     release_id = response_json['main_release_url'].rsplit('/', 1)[1]
 

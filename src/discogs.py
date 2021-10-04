@@ -46,7 +46,8 @@ def Discogs(files):
             return ENV_TAGGING_TODO
         
         discogs_url = str(file.get('TXXX:Custom'))
-        discogs_id = discogs_url.rsplit('/', 1)[1]
+        discogs_slug = discogs_url.rsplit('/', 1)[1]
+        discogs_id = discogs_slug.split('-', 1)[0]
 
     # logics if discogs/master
     if '/master/' in discogs_url:
