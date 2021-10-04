@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/bamdadsabbagh/tagger/compare/v1.4.5...v1.4.6) (2021-10-04)
+
+
+### Bug Fixes
+
+* correct id parsing for flac files as well ([ab37022](https://github.com/bamdadsabbagh/tagger/commit/ab37022474f0f55e89fff72217fd168ec7a6182a))
+
 ## [1.4.5](https://github.com/bamdadsabbagh/tagger/compare/v1.4.4...v1.4.5) (2021-10-04)
 
 
