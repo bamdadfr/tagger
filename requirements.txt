@@ -4,7 +4,7 @@ deprecation==2.1.0
 filetype==1.0.7
 idna==2.10
 mutagen==1.45.1
-packaging==20.9
+packaging==21.2
 pyparsing==2.4.7
 requests==2.25.1
 six==1.15.0
