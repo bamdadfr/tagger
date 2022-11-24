@@ -9,4 +9,4 @@ pyparsing==2.4.7
 requests==2.25.1
 six==1.15.0
 style==1.1.6
-urllib3==1.26.4
+urllib3==1.26.13
