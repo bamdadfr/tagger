@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/bamdadsabbagh/tagger/compare/v1.4.6...v1.5.0) (2024-03-26)
+
+
+### Bug Fixes
+
+* **Bin:** Use correct --rm flag for docker run ([7ab2f97](https://github.com/bamdadsabbagh/tagger/commit/7ab2f970f1d9433efb1bb514ff1cbdc9e8c26b72))
+* **Config:** Use better yaml example ([2f085df](https://github.com/bamdadsabbagh/tagger/commit/2f085df08149629bf1ade1346fe63d50641fb3b4))
+* **Release:** Rename semantic release config file ([a02ad9f](https://github.com/bamdadsabbagh/tagger/commit/a02ad9f3abc89a7ee790fac2cf56fd7cc9a0c3fe))
+
+
+### Features
+
+* **App:** Rewrite ([8edfd73](https://github.com/bamdadsabbagh/tagger/commit/8edfd7387942263ee3fe4e5293c32c58d3dd5791))
+
 ## [1.4.6](https://github.com/bamdadsabbagh/tagger/compare/v1.4.5...v1.4.6) (2021-10-04)
 
 
