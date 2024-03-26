@@ -1,0 +1,5 @@
+TAG_TODO = "TODO"
+TAG_DONE = "DONE"
+SEPARATOR = "; "
+MAX_CALLS_PER_MINUTE = 25
+FILE_TYPES = [".flac", ".mp3"]

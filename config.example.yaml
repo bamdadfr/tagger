@@ -1,0 +1,6 @@
+---
+docker: true
+token: CHANGEME
+paths:
+  - /storage/X30/jriver/deemix/downloads
+  #- /full/path
