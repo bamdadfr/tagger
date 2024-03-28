@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/bamdadsabbagh/tagger/compare/v1.5.0...v1.5.1) (2024-03-28)
+
+
+### Bug Fixes
+
+* **Updater:** Use TODO tag if country is empty for flacs ([ecc004c](https://github.com/bamdadsabbagh/tagger/commit/ecc004c2018010ac116e806f909cf57cb3a7cc84))
+
 # [1.5.0](https://github.com/bamdadsabbagh/tagger/compare/v1.4.6...v1.5.0) (2024-03-26)
 
 
