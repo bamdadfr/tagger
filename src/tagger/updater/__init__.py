@@ -54,7 +54,9 @@ class Updater:
         file.meta["composer"] = release.genres
         file.meta["genre"] = release.styles if release.styles is not None else TAG_TODO
         file.meta["organization"] = release.label
-        file.meta["country"] = release.country
+        file.meta["country"] = (
+            release.country if release.country is not None else TAG_TODO
+        )
         file.meta["custom"] = f"{TAG_DONE} {release.url}"
         file.meta.save()
 
