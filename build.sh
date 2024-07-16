@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t tagger .
+sudo docker build -t tagger .
