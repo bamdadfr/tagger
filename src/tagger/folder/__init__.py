@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 
 from rich import print
-
 from tagger.constants import FILE_TYPES
 from tagger.file import File
 
@@ -17,7 +16,7 @@ class Folder:
         self.path = path
         self.files = self.__get_files()
         self.count = len(self.files)
-        self.done = self.files[0].done
+        self.done = self.__compute_done()
 
     def __get_files(self):
         paths = []
@@ -32,3 +31,13 @@ class Folder:
         paths.sort()
         files = [File(p) for p in paths]
         return files
+
+    def __compute_done(self) -> bool:
+        done = True
+
+        for file in self.files:
+            if file.done is False:
+                done = False
+                break
+
+        return done
