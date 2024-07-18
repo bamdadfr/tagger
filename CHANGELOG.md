@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/bamdadfr/tagger/compare/v1.5.2...v1.5.3) (2024-07-18)
+
+
+### Bug Fixes
+
+* **folder:** compute done for all files ([0a153c2](https://github.com/bamdadfr/tagger/commit/0a153c236ef81599ca8e68ab53640c29fff2206f))
+
 ## [1.5.2](https://github.com/bamdadfr/tagger/compare/v1.5.1...v1.5.2) (2024-07-16)
 
 
