@@ -3,7 +3,8 @@ from typing import List, Union
 
 from mutagen.easyid3 import EasyID3
 from mutagen.flac import FLAC
-from mutagen.id3 import ID3
+from mutagen.id3 import ID3, ID3NoHeaderError
+from mutagen.mp3 import MP3
 from typing_extensions import Literal
 
 from tagger.constants import SEPARATOR, TAG_DONE, TAG_TODO
@@ -33,7 +34,7 @@ class File:
     ) -> None:
         self.path = path
         self.type_ = self.__get_type()
-        self.meta = self.__get_meta()
+        self.meta = self.__get_meta()  # type: ignore
         self.__get_tags()
 
     def __get_type(self) -> Type:
@@ -50,7 +51,13 @@ class File:
         if self.type_ == "flac":
             return FLAC(self.path)
         if self.type_ == "mp3":
-            return EasyID3(self.path)
+            try:
+                return EasyID3(self.path)
+            except ID3NoHeaderError:
+                audio = MP3(self.path)
+                audio.add_tags()
+                audio.save()
+                return EasyID3(self.path)
 
         raise Exception("File type not supported")
 

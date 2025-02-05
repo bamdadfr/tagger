@@ -1,6 +1,7 @@
 from typing import Union
 
-from mutagen.id3 import ID3, TXXX
+from mutagen.id3 import ID3, TXXX, ID3NoHeaderError
+from mutagen.mp3 import MP3
 from rich import print
 
 from tagger.common.DiscogsRelease import DiscogsRelease
